@@ -3,7 +3,7 @@ import { Actiontypes } from "../constants/actiontyp";
 const initstate = {
     products : [{id:1,
         name:"some name", 
-        class:"A good guy",}],
+        classi:"A good guy",}],
 };
 
 export const productsreducer = (state = initstate, {type , payload}) => {
