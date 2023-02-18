@@ -2,7 +2,9 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
-import Product from './Product';
+
+import { Link } from 'react-router-dom';
+
 import { setproducts } from '../reduxd/actions/Productactions';
 const Productsall = () => {
     const product = useSelector((state) => state.allProducts.products);
@@ -28,7 +30,7 @@ const Productsall = () => {
                 
                     
                 <div className="four wide column" key={id}>
-                {/* <Link to={`/product/${id}`}> */}
+                <Link to={`/pro/${id}`}>
                   <div className="ui link cards">
                     <div className="card">
                       <div className="image">
@@ -41,7 +43,7 @@ const Productsall = () => {
                       </div>
                     </div>
                   </div>
-                {/* </Link> */}
+                </Link>
               </div>
                    )
             })}

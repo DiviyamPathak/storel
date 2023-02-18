@@ -3,7 +3,8 @@ import Header from './components/Header';
 import 'semantic-ui-css/semantic.min.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Productsall from './components/Productsall';
-import Product from './components/Product';
+
+import ProductDetails from './components/ProductDetails';
 function App() {
   return (
     <div className="App">
@@ -12,7 +13,7 @@ function App() {
 
         <Routes>
           <Route path='/' exact element={<Productsall/>}></Route>
-          <Route path='/pro' exact element={<Product/>}></Route>
+          <Route path='/pro/:productId' exact element={<ProductDetails/>}></Route>
           <Route>404 page not found</Route>
           </Routes>
       

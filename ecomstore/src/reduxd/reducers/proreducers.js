@@ -16,7 +16,7 @@ export const selectedproductsreducer = (state = initstate, {type , payload}) => 
     console.log(type);
     switch(type){
         case Actiontypes.SEL_PRODUCT:
-            return state
+            return { ...state, ...payload };
         case Actiontypes.REM_SEL_PRODUCT:
             return {}
         default:
